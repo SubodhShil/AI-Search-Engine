@@ -4,10 +4,10 @@ const SingleNews = ({ article }) => {
     const textContent = article.description;
 
     return (
-        <div className='border border-black p-3 w-[350px]'>
-            <h2 className='font-bold'>{article.title}</h2>
+        <div className='rounded-xl border-black p-5 w-[400px] bg-[#191825] text-white'>
+            <h2 className='font-bold text-2xl mb-2'>{article.title}</h2>
             <img src={article.urlToImage} alt="" height='400px' width='400px' />
-            <p>
+            <p className='mt-3'>
                 {textContent}
             </p>
 

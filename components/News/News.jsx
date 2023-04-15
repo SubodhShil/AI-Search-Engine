@@ -24,7 +24,7 @@ const News = () => {
 
     return (
         <div>
-            <h1 className='text-3xl font-[500] mt-5 ml-5 text-center'>Current Affairs</h1>
+            <h1 className='text-3xl font-[500] mt-5 ml-5 max-sm:text-center'>Current Affairs</h1>
             <div className='ml-2 flex flex-row gap-6 flex-wrap justify-center mt-5'>
                 {
                     articles.map(article => <SingleNews article={article} />)

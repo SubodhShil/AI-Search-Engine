@@ -49,9 +49,9 @@ const Header = () => {
                         <input
                             type="text"
                             placeholder='What are you looking for?'
-                            className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[40%] text-xl outline-none focus:outline-none border-black bg-inherit'
+                            className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[50%] text-xl outline-none focus:outline-none border-black bg-inherit'
                         />
-                        <div className=' bg-[#191825] p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer '>
+                        <div className=' bg-[#0f0c29] p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer rounded-r-lg'>
                             <VscSearch className='text-3xl text-white' />
                         </div>
                     </div>

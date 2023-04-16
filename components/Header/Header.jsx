@@ -4,6 +4,8 @@ import { BsFillGridFill } from 'react-icons/bs';
 import { VscSearch } from 'react-icons/vsc';
 import Avatar from '@/components/Avatar/Avatar';
 
+import Style from './Header.module.css';
+
 const Header = () => {
     return (
         <div>
@@ -42,13 +44,16 @@ const Header = () => {
                 <div className='p-5'>
                     <h1 className="text-5xl font-[500] max-sm:text-center mb-4">GPT Search</h1>
 
-                    <div className='lg:w-[500px] flex items-center p-4 rounded-full gap-3 bg-white '>
-                        <VscSearch className='text-3xl' />
+                    <div className={`lg:w-[500px] md:w-[500px] flex justify-between h-[70px] items-center pl-3 rounded-lg gap-3 bg-white ${Style.inputBox}`}>
+
                         <input
                             type="text"
                             placeholder='What are you looking for?'
                             className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[40%] text-xl outline-none focus:outline-none border-black bg-inherit'
                         />
+                        <div className=' bg-[#191825] p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer '>
+                            <VscSearch className='text-3xl text-white' />
+                        </div>
                     </div>
                 </div>
             </div>

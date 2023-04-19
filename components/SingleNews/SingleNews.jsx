@@ -9,7 +9,7 @@ const SingleNews = ({ article }) => {
             <div>
                 <h2 className='font-bold text-2xl mb-2'>{article.title}</h2>
             </div>
-            <div className=''>
+            <div className='flex justify-center'>
                 <img src={article.urlToImage} alt="" height='400px' width='400px' className='rounded-md' />
             </div>
             <div>

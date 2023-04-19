@@ -1,14 +1,15 @@
 import Header from '@/components/Header/Header';
 import News from '@/components/News/News';
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const index = () => {
+  const [isSearching, setSearching] = useState(false);
+
   return (
     <div>
-
       {/* Main header component */}
-      <Header />
+      <Header setSearching={setSearching} isSearching={isSearching} />
       <News />
     </div>
   );

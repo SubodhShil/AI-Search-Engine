@@ -7,7 +7,7 @@ const index = () => {
   const [isSearching, setSearching] = useState(false);
 
   return (
-    <div>
+    <div className='pb-5'>
       {/* Main header component */}
       <Header setSearching={setSearching} isSearching={isSearching} />
       <News />

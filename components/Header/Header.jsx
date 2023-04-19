@@ -20,7 +20,7 @@ const Header = (props) => {
     return (
         <div>
             {/* Top header portion */}
-            <div className='bg-gradient-to-r from-[#D4E4FD] to-[#f1b79163]'>
+            <div className='bg-gradient-to-r from-[#ECFBFF] to-[#fcf7fd] '>
                 <Head>
                     <title>Google Clone</title>
                     <link rel="stylesheet" href="" />
@@ -55,7 +55,7 @@ const Header = (props) => {
                 <div className='p-5'>
                     <h1 className="lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-7xl bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">GPT Search</h1>
 
-                    <div className='flex lg:justify-center'>
+                    <div className='flex lg:justify-center mb-10'>
                         <div className={`w-[500px] lg:w-[800px] md:w-[500px] max-sm:w-[600px] flex justify-between h-[70px] items-center pl-3 rounded-lg gap-3 bg-white ${Style.inputBox}`}>
 
                             {/* input field */}

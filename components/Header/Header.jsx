@@ -1,28 +1,35 @@
 import React, { useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { BsFillGridFill } from 'react-icons/bs';
 import { VscSearch } from 'react-icons/vsc';
 import Avatar from '@/components/Avatar/Avatar';
 
+/// Import external stylesheet
 import Style from './Header.module.css';
 
 const Header = (props) => {
 
+    /// next.js router provider
+    const router = useRouter();
+
     /// manage searching
-    /// 
-    // const searchInputRef = useRef(null);
-    // const search = (e) => {
-    //     e.preventDefault();
-    //     const term = searchInputRef.current.value;
-    //     if (!term) return;
-    // };
+    const searchInputRef = useRef(null);
+
+    const search = (e) => {
+        e.preventDefault();
+        const term = searchInputRef.current.value;
+        if (!term) return;
+
+        router.push(`search?term=${term}`);
+    };
 
     return (
         <div>
             {/* Top header portion */}
-            <div className='bg-gradient-to-r from-[#ECFBFF] to-[#fcf7fd] '>
+            <div className='bg-gradient-to-r from-[#ecfbfffb] to-[#fcf7fd] '>
                 <Head>
-                    <title>Google Clone</title>
+                    <title>GPT Search</title>
                     <link rel="stylesheet" href="" />
                 </Head>
 
@@ -53,7 +60,10 @@ const Header = (props) => {
 
                 {/* Body */}
                 <div className='p-5'>
-                    <h1 className="lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-7xl bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">GPT Search</h1>
+                    <div>
+                        <h1 className="lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-7xl bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">GPT Search</h1>
+
+                    </div>
 
                     <div className='flex lg:justify-center mb-10'>
                         <div className={`w-[500px] lg:w-[800px] md:w-[500px] max-sm:w-[600px] flex justify-between h-[70px] items-center pl-3 rounded-lg gap-3 bg-white ${Style.inputBox}`}>
@@ -61,11 +71,13 @@ const Header = (props) => {
                             {/* input field */}
                             <input
                                 type="text"
-                                // ref={searchInputRef}
+                                ref={searchInputRef}
                                 placeholder='What are you looking for?'
                                 className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[50%] text-xl outline-none focus:outline-none border-black bg-inherit'
                             />
-                            <button className=' bg-[#0f0c29] bg-gradient-to-r from-orange-500 to-yellow-500 p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer rounded-r-lg'>
+                            <button
+                            onClick={search}
+                                className=' bg-[#0f0c29] bg-gradient-to-r from-orange-500 to-yellow-500 p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer rounded-r-lg'>
                                 <VscSearch className='text-3xl text-white' />
                             </button>
                         </div>

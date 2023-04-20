@@ -39,40 +39,46 @@ const Header = (props) => {
 
                 {/* Header */}
                 <header className='flex w-full p-5 justify-between items-center'>
+
                     {/* left */}
-                    <div className='flex gap-2'>
-                        <div className={`flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
+
+                    <div className='flex gap-4'>
+                        <div className={`max-sm:hidden flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
                             <RiFolderSharedFill />
                             <p className='link'>File Share</p>
                         </div>
-                        <div className={`flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
+                        <div className={`max-sm:hidden flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
                             <GiSandsOfTime />
                             <p className='link'>Productivity Tracker</p>
                         </div>
                     </div>
 
                     {/* right */}
-                    <div className='flex gap-2 items-center'>
+                    <div className='flex gap-2 items-center max-sm:justify-between max-sm:w-full'>
 
-                        <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
-                            <IoMailUnreadOutline className='text-2xl' />
-                            <p className='link'>Mailing</p>
-                        </div>
+                        <div className='flex gap-4'>
+                            <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                                <IoMailUnreadOutline className='text-2xl' />
+                                <p className='link'>Mailing</p>
+                            </div>
 
-                        <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
-                            <BsImages />
-                            <p className='link'>Image Search</p>
+                            <div className=' flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                                <BsImages />
+                                <p className='link'>Image Search</p>
+                            </div>
                         </div>
 
                         {/* Icon */}
-                        <div className='rounded-full hover:bg-gray-100 cursor-pointer transition ease-in-out delay-150'>
-                            <BsFillGridFill
-                                className="text-xl m-3"
-                            />
-                        </div>
+                        <div className='flex gap-2'>
+                            <div className='rounded-full hover:bg-gray-100 cursor-pointer transition ease-in-out delay-150'>
+                                <BsFillGridFill
+                                    className="text-xl m-3"
+                                />
+                            </div>
 
-                        {/* Avatar */}
-                        <Avatar url='https://plus.unsplash.com/premium_photo-1669688174637-92ff26cc0a9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' />
+                            {/* Avatar */}
+                            <Avatar url='https://plus.unsplash.com/premium_photo-1669688174637-92ff26cc0a9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80' />
+                        </div>
                     </div>
                 </header>
 

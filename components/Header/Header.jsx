@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { BsFillGridFill } from 'react-icons/bs';
+import { IoMailUnreadOutline } from 'react-icons/io5';
+import { RiFolderSharedFill } from 'react-icons/ri';
+import { GiSandsOfTime } from 'react-icons/gi';
+import { BsImages } from 'react-icons/bs';
 import { VscSearch } from 'react-icons/vsc';
 import Avatar from '@/components/Avatar/Avatar';
 
@@ -37,14 +41,28 @@ const Header = (props) => {
                 <header className='flex w-full p-5 justify-between items-center'>
                     {/* left */}
                     <div className='flex gap-2'>
-                        <p className='link'>About</p>
-                        <p className='link'>Store</p>
+                        <div className={`flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
+                            <RiFolderSharedFill />
+                            <p className='link'>File Share</p>
+                        </div>
+                        <div className={`flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50`}>
+                            <GiSandsOfTime />
+                            <p className='link'>Productivity Tracker</p>
+                        </div>
                     </div>
 
                     {/* right */}
                     <div className='flex gap-2 items-center'>
-                        <p className='link'>Gmail</p>
-                        <p className='link'>Images</p>
+
+                        <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                            <IoMailUnreadOutline className='text-2xl' />
+                            <p className='link'>Mailing</p>
+                        </div>
+
+                        <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                            <BsImages />
+                            <p className='link'>Image Search</p>
+                        </div>
 
                         {/* Icon */}
                         <div className='rounded-full hover:bg-gray-100 cursor-pointer transition ease-in-out delay-150'>
@@ -80,14 +98,14 @@ const Header = (props) => {
                             <button
                                 onClick={search}
                                 className=' bg-[#0f0c29] bg-gradient-to-r from-orange-500 to-yellow-500 p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer rounded-r-lg'>
-                                <VscSearch className='text-3xl text-white' />
+                                <VscSearch className='text-3xl text-white transition duration-100 transform hover:scale-110' />
                             </button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
-        </div>
+        </div >
     );
 };
 

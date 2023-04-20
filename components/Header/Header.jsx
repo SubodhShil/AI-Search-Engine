@@ -58,9 +58,11 @@ const Header = (props) => {
                     </div>
                 </header>
 
-                {/* Body */}
+                {/* Application name and search bar part*/}
+
                 <div className='p-5'>
                     <div>
+
                         <h1 className="lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-7xl bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">GPT Search</h1>
 
                     </div>
@@ -76,7 +78,7 @@ const Header = (props) => {
                                 className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[50%] text-xl outline-none focus:outline-none border-black bg-inherit'
                             />
                             <button
-                            onClick={search}
+                                onClick={search}
                                 className=' bg-[#0f0c29] bg-gradient-to-r from-orange-500 to-yellow-500 p-1 h-[70px] w-[70px] flex justify-center items-center cursor-pointer rounded-r-lg'>
                                 <VscSearch className='text-3xl text-white' />
                             </button>

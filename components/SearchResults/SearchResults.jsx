@@ -1,4 +1,5 @@
 import React from 'react';
+import Style from './SearchResults.module.css';
 
 const SearchResults = ({ results }) => {
     return (
@@ -11,7 +12,9 @@ const SearchResults = ({ results }) => {
                 style={{ width: '50px', height: '50px' }}
                 loop>
             </lord-icon>
-            <h1 className='font-[500] w-fit p-1'>Showing you {results?.searchInformation?.formattedTotalResults} results</h1>
+            <h1 className={`font-[500] w-fit p-1 ${Style.highlight}`}>
+                Showing you {results?.searchInformation?.formattedTotalResults} results
+            </h1>
         </div>
     );
 };

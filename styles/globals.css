@@ -30,6 +30,6 @@ body::-webkit-scrollbar-thumb {
 
 
 ::selection {
-  background-color: #562EFF;
+  background-color: orange;
   color: white;
 }

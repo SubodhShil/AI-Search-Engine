@@ -21,7 +21,7 @@ const Search = ({ results }) => {
             <SearchPageHeader />
 
             {/* Search results */}
-
+            
         </div>
     );
 };

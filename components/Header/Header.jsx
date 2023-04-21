@@ -99,7 +99,7 @@ const Header = (props) => {
                                 type="text"
                                 ref={searchInputRef}
                                 placeholder='What are you looking for?'
-                                className='pl-1 pb-1 max-sm:w-full lg:w-[500px] md:w-[50%] text-xl outline-none focus:outline-none border-black bg-inherit'
+                                className='pl-1 h-full pb-1 w-full text-xl outline-none focus:outline-none border-black bg-inherit'
                             />
                             <button
                                 onClick={search}

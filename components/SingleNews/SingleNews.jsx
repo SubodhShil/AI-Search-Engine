@@ -5,9 +5,9 @@ const SingleNews = ({ article }) => {
     const textContent = article.description;
 
     return (
-        <div className={`rounded-lg border-black p-5 w-[400px] max-sm:w-[85%] bg-[#191825] text-white justify-center`}>
+        <div className={`rounded-lg border-black p-5 w-[400px] max-sm:w-[85%] bg-[#191825] text-white justify-center ${Style.newsCard}`}>
             <div>
-                <h2 className='font-bold text-2xl mb-2'>{article.title}</h2>
+                <a className='font-bold block text-2xl mb-4 lg:h-[110px] max-sm:p-2 cursor-pointer border-b-4 border-gray-500 hover:border-blue-500 text-justify transition duration-500 ease-in-out'>{article.title}</a>
             </div>
             <div className='flex justify-center'>
                 <img src={article.urlToImage} alt="" height='400px' width='400px' className='rounded-md' />
@@ -17,7 +17,6 @@ const SingleNews = ({ article }) => {
                     {textContent}
                 </p>
             </div>
-
         </div>
     );
 };

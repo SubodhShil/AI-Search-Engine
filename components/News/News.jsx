@@ -26,7 +26,10 @@ const News = () => {
 
     return (
         <div>
-            <h1 className='text-3xl font-[500] mt-5 ml-5 max-sm:text-center'>Current Affairs</h1>
+            <div className='flex max-sm:justify-center'>
+                <h1 className='text-3xl font-[500] mt-5 ml-5 max-sm:text-center bg-orange-500 p-2 rounded-lg shadow-lg shadow-orange-500/60 w-fit text-white'>Current Affairs</h1>
+
+            </div>
             {isLoading ? (
                 <div className='flex justify-center items-center mt-10'>
                     <ClipLoader

@@ -37,7 +37,7 @@ const SearchResults = ({ results }) => {
 
                 {/* GPT Chat Part */}
 
-                <div className='col-span-1 bg-[#F9F9F9] border p-2 flex items-center'>
+                <div className='col-span-1 bg-[#191825] rounded-lg  p-2 flex items-center text-white'>
                     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                     <lord-icon
                         src="https://cdn.lordicon.com/mjmrmyzg.json"

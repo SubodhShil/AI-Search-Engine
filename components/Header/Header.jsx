@@ -57,12 +57,12 @@ const Header = (props) => {
                     <div className='flex gap-2 items-center max-sm:justify-between max-sm:w-full'>
 
                         <div className='flex gap-4'>
-                            <div className='flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                            <div className='max-sm:flex-col flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
                                 <IoMailUnreadOutline className='text-2xl' />
                                 <p className='link'>Mailing</p>
                             </div>
 
-                            <div className=' flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
+                            <div className='max-sm:flex-col max-sm:justify-between flex items-center gap-2 text-white bg-cyan-500 p-2 rounded-lg shadow-lg shadow-cyan-500/50'>
                                 <BsImages />
                                 <p className='link'>Image Search</p>
                             </div>

@@ -4,6 +4,7 @@ import SearchPageHeader from '@/components/SearchPageHeader/SearchPageHeader';
 import { API_Key, CONTEXT_KEY } from '@/keys';
 import Response from '@/Response';
 import { useRouter } from 'next/router';
+import SearchResults from '@/components/SearchResults/SearchResults';
 
 const Search = ({ results }) => {
     const router = useRouter();
@@ -20,8 +21,8 @@ const Search = ({ results }) => {
             {/* Search result top header section */}
             <SearchPageHeader />
 
-            {/* Search results */}
-            
+            {/* Search results fetched from google search api */}
+            <SearchResults results={results} />
         </div>
     );
 };

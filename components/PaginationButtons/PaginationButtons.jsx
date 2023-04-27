@@ -2,9 +2,7 @@ import React from 'react';
 
 const PaginationButtons = () => {
     return (
-        /// Next Page buttons
-        /// are listed in the component
-
+        /// Next result pages listed
         <div>
 
         </div>

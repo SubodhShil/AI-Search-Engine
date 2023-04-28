@@ -6,7 +6,7 @@ import AIChat from '../AIChat/AIChat';
 
 const SearchResults = ({ results }) => {
     return (
-        <div className=' p-2'>
+        <div className=''>
 
             {/* Result count header part */}
             <div className='flex items-center'>
@@ -26,7 +26,7 @@ const SearchResults = ({ results }) => {
             </div>
 
             {/* Showing the result in the page */}
-            <div className='mt-4 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 p-3 gap-4 justify-center'>
+            <div className='mt-4 grid place-content-between grid-cols-1 lg:grid-cols-3 xl:grid-cols-3'>
 
                 <div className='col-span-2 p-1 flex flex-col'>
                     {results.items.map((result) => (
@@ -53,7 +53,9 @@ const SearchResults = ({ results }) => {
                 </div>
 
                 {/* GPT Chat Part */}
-                <AIChat />
+                <div className='flex justify-center '>
+                    <AIChat />
+                </div>
 
             </div>
 

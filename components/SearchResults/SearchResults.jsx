@@ -5,7 +5,7 @@ import { GrSend } from 'react-icons/gr';
 
 const SearchResults = ({ results }) => {
     return (
-        <div className=''>
+        <div className=' p-2'>
 
             {/* Result count header part */}
             <div className='flex items-center'>
@@ -25,11 +25,11 @@ const SearchResults = ({ results }) => {
             </div>
 
             {/* Showing the result in the page */}
-            <div className='mt-4 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 p-2'>
+            <div className='mt-4 grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 p-3 gap-4'>
 
-                <div className='col-span-2 p-1'>
+                <div className='col-span-2 p-1 flex flex-col'>
                     {results.items.map((result) => (
-                        <div className='border rounded-md pl-3 m-2 bg-[ghostwhite] group pt-3' key={result.link}>
+                        <div className='border rounded-md p-3 m-2 bg-[ghostwhite] group pt-3' key={result.link}>
 
                             {/* URL */}
                             <a

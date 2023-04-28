@@ -1,6 +1,6 @@
 import React from 'react';
 import { GrSend } from 'react-icons/gr';
-
+import Style from './AIChat.module.css';
 
 const AIChat = () => {
     return (
@@ -16,20 +16,23 @@ const AIChat = () => {
                             style={{ width: '75px', height: '75px' }}
                             loop>
                         </lord-icon>
-                        <h1 className='text-xl'>Chat With The AI</h1>
+                        <h1 className='text-xl border-b-4 border-cyan-400'>Chat With The AI</h1>
                     </div>
-
-
                 </div>
+
+
 
                 {/* User question  part */}
-                <div className='border w-[75%] p-1 mb-2 rounded-md '>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.
+                <div id='userChatDiv' className={`flex justify-end w-full ${Style.chatDiv}`}>
+                    <div className={`w-[75%] p-2 mb-2 rounded-md bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200 backdrop-blur-sm bg-white/30`}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, natus.
+                    </div>
                 </div>
+
 
 
                 {/* Text result prompts */}
-                <div className='p-2 rounded-lg text-black bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200  '>
+                <div className='p-2 rounded-lg text-gray-50 bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200 '>
                     <div className='flex items-center rounded-md mb-2 w-fit bg-gray-500 shadow-xl shadow-cyan-100 cursor-pointer'>
 
                         <lord-icon

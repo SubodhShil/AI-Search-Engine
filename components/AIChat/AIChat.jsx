@@ -13,7 +13,11 @@ import { useSpring, animated } from 'react-spring';
 import { Configuration, OpenAIApi } from "openai";
 
 const AIChat = () => {
-    const [image, setImage] = useState("");
+    const [input, setInput] = useState("");
+
+    const handleSend = () => {
+
+    }
 
     // styles object for animation
     const styles = useSpring({
@@ -70,10 +74,20 @@ const AIChat = () => {
                 {/* search bar */}
                 <div className='flex items-center justify-between h-full p-1 text-black'>
                     <div className='border-2 border-cyan-400 rounded-md mt-4 max-sm:w-[80%] w-[85%]'>
-                        <input type="text" className='bg-inherit w-full pl-2 p-1 text-white' placeholder='Type your prompt' />
+
+                        {/* Input from user */}
+                        <input type="text"
+                            value={input}
+                            className='bg-inherit w-full pl-2 p-1 text-white'
+                            placeholder='Type your prompt'
+                            onChange={e => setInput(e.target.value)}
+                        />
                     </div>
 
-                    <button className='text-white rounded-xl bg-cyan-200 shadow-lg shadow-cyan-600/100 h-10 w-10 mt-3 cursor-pointer flex justify-center items-center transition duration-100 ease-in-out hover:bg-cyan-400 hover:scale-110'>
+                    <button
+                        className='text-white rounded-xl bg-cyan-200 shadow-lg shadow-cyan-600/100 h-10 w-10 mt-3 cursor-pointer flex justify-center items-center transition duration-100 ease-in-out hover:bg-cyan-400 hover:scale-110'
+                        onClick={handleSend}
+                    >
                         {/* Button content */}
                         <GrSend className='text-2xl w-full' color='white' />
                     </button>

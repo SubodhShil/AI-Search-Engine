@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Icon imports
 import { GrSend } from 'react-icons/gr';
@@ -9,7 +9,15 @@ import Style from './AIChat.module.css';
 // External library imports
 import { useSpring, animated } from 'react-spring';
 
+// OpenAI API imports
+import { Configuration, OpenAIApi } from "openai";
+
+// const API_KEY = "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";
+
 const AIChat = () => {
+    const [image, setImage] = useState("");
+
+    // styles object for animation
     const styles = useSpring({
         from: { opacity: 0, transform: 'translate3d(0,-100%,0)' },
         to: { opacity: 1, transform: 'translate3d(0,0%,0)' },
@@ -31,8 +39,6 @@ const AIChat = () => {
                         <h1 className='text-xl border-b-4 border-cyan-400'>Chat With The AI</h1>
                     </div>
                 </div>
-
-
 
                 {/* User question  part */}
                 <div id='userChatDiv' className={`flex justify-end w-full ${Style.chatDiv}`}>
@@ -57,8 +63,10 @@ const AIChat = () => {
                     </div>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ab, facilis magnam iure cum ducimus sed omnis quaerat eligendi eos officia explicabo deleniti fugiat qui esse nemo fuga quae, numquam repudiandae accusamus consequatur animi sapiente? Officia, facere necessitatibus ut distinctio perspiciatis nemo, dolores ipsam dolore, aut unde iure animi enim natus. Temporibus nisi omnis ducimus tempora excepturi eos quis quos magnam nihil, incidunt suscipit architecto iure quia consequatur, voluptates, eum vitae nobis voluptas hic repudiandae ex? Dolores, ullam harum! Saepe minima ipsa et. Delectus laboriosam numquam velit obcaecati harum molestias dolore. Sed quis, voluptas ipsum architecto distinctio magni a nulla. lorem500
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ab, facilis magnam iure cum ducimus sed omnis quaerat eligendi eos officia explicabo deleniti fugiat qui esse nemo fuga quae, numquam repudiandae accusamus consequatur animi sapiente? Officia, facere necessitatibus ut distinctio perspiciatis nemo, dolores ipsam dolore, aut unde iure animi enim natus. Temporibus nisi omnis ducimus tempora excepturi eos quis quos magnam nihil, incidunt suscipit architecto iure quia consequatur, voluptates, eum vitae nobis voluptas hic repudiandae ex? Dolores, ullam harum! Saepe minima ipsa et. Delectus laboriosam numquam velit obcaecati harum molestias dolore. Sed quis, voluptas ipsum architecto distinctio magni a nulla.
+
                     </p>
+
                 </div>
 
                 {/* search bar */}

@@ -38,7 +38,7 @@ const SearchResults = ({ results }) => {
 
                 <div className='col-span-2 p-1 flex flex-col'>
                     {results.items.map((result) => (
-                        <animated.div style={styles} className=' rounded-md p-3 m-2 bg-[#393E6F] text-white group pt-3' >
+                        <animated.div style={styles} className=' rounded-md p-3 m-2 bg-[ghostwhite] group pt-3' >
                             <div key={result.link}>
 
                                 {/* URL */}

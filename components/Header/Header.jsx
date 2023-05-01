@@ -86,10 +86,9 @@ const Header = (props) => {
 
                 <div className='p-5'>
                     <div>
-
-                        <h1 className="lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-7xl bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">GPT Search</h1>
-
+                        <h1 className={`lg:text-center max-sm:text-center mb-4 text-transparent font-extrabold text-8xl bg-clip-text ${Style.animateGradient}`}>GPT Search</h1>
                     </div>
+
 
                     <div className='flex lg:justify-center mb-10'>
                         <div className={`w-[500px] lg:w-[800px] md:w-[500px] max-sm:w-[600px] flex justify-between h-[70px] items-center pl-3 rounded-lg gap-3 bg-white ${Style.inputBox}`}>

@@ -12,8 +12,6 @@ import { useSpring, animated } from 'react-spring';
 // OpenAI API imports
 import { Configuration, OpenAIApi } from "openai";
 
-// const API_KEY = "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";
-
 const AIChat = () => {
     const [image, setImage] = useState("");
 

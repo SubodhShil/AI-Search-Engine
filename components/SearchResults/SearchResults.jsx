@@ -38,7 +38,7 @@ const SearchResults = ({ results }) => {
 
                 <div className='col-span-2 p-1 flex flex-col'>
                     {results.items.map((result) => (
-                        <animated.div style={styles} className=' rounded-md p-3 m-2 bg-[ghostwhite] group pt-3' >
+                        <animated.div style={styles} className='text-black rounded-md p-3 m-2 bg-gradient-to-r from-rose-100 to-teal-100 group pt-3' >
                             <div key={result.link}>
 
                                 {/* URL */}
@@ -51,7 +51,7 @@ const SearchResults = ({ results }) => {
 
                                 {/* Clickable link text */}
                                 <a href="">
-                                    <h2 className='text-blue-400 group-hover:underline text-xl'>{result?.title}</h2>
+                                    <h2 className='group-hover:underline text-xl'>{result?.title}</h2>
                                 </a>
 
                                 {/*  */}

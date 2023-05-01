@@ -4,7 +4,15 @@ import PaginationButtons from '../PaginationButtons/PaginationButtons';
 
 import AIChat from '../AIChat/AIChat';
 
+import { useSpring, animated } from 'react-spring';
+
 const SearchResults = ({ results }) => {
+
+    const styles = useSpring({
+        from: { opacity: 0, transform: 'translate3d(-50%,0%,0)' },
+        to: { opacity: 1, transform: 'translate3d(0%,0%,0)' },
+    });
+
     return (
         <div className=''>
 
@@ -30,30 +38,31 @@ const SearchResults = ({ results }) => {
 
                 <div className='col-span-2 p-1 flex flex-col'>
                     {results.items.map((result) => (
-                        <div className='border rounded-md p-3 m-2 bg-[ghostwhite] group pt-3' key={result.link}>
+                        <animated.div style={styles} className=' rounded-md p-3 m-2 bg-[#393E6F] text-white group pt-3' >
+                            <div key={result.link}>
 
-                            {/* URL */}
-                            <a
-                                href={result.link}
-                                className={`text-[13px] p-1 bg-gray-400 text-white rounded-md`}
-                            >
-                                {result.link}
-                            </a>
+                                {/* URL */}
+                                <a
+                                    href={result.link}
+                                    className={`text-[13px] p-1 bg-gray-400 text-white rounded-md`}
+                                >
+                                    {result.link}
+                                </a>
 
-                            {/* Clickable link text */}
-                            <a href="">
-                                <h2 className='text-blue-400 group-hover:underline text-xl'>{result?.title}</h2>
-                            </a>
+                                {/* Clickable link text */}
+                                <a href="">
+                                    <h2 className='text-blue-400 group-hover:underline text-xl'>{result?.title}</h2>
+                                </a>
 
-                            {/*  */}
-                            <p className='line-clamp-3 text-[15px] mt-2'>{result?.snippet}</p>
-                        </div>
-
+                                {/*  */}
+                                <p className='line-clamp-3 text-[15px] mt-2'>{result?.snippet}</p>
+                            </div>
+                        </animated.div>
                     ))}
                 </div>
 
                 {/* GPT Chat Part */}
-                <div className='flex justify-center '>
+                <div className='flex justify-center'>
                     <AIChat />
                 </div>
 
